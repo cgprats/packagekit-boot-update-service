@@ -1,0 +1,10 @@
+[Unit]
+Description=Packagekit Updates on Boot
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/usr/share/PackageKit/packagekit-background.sh
+
+[Install]
+WantedBy=multi-user.target
